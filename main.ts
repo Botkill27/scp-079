@@ -6,7 +6,7 @@ basic.showLeds(`
     . # . . #
     `)
 neZha.setMotorSpeed(neZha.MotorList.M1, -100)
-basic.forever(function () {
+basic.forever(function on_forever() {
     if (PlanetX_Basic.ultrasoundSensor(PlanetX_Basic.DigitalRJPin.J1, PlanetX_Basic.Distance_Unit_List.Distance_Unit_cm) < 40) {
         basic.pause(1000)
         neZha.setServoAngel(neZha.ServoTypeList._360, neZha.ServoList.S1, 50)
@@ -21,4 +21,5 @@ basic.forever(function () {
         basic.pause(1000)
         neZha.setServoAngel(neZha.ServoTypeList._360, neZha.ServoList.S1, 180)
     }
+    
 })
